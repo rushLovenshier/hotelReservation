@@ -1,0 +1,36 @@
+<div class="main-wrap">
+
+<form [formGroup]="updateGuestForm" (ngSubmit)="updateData()">
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest ID</mat-label>
+      <input formControlName="id" matInput type="text"  placeholder="Ex. C001">
+    </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest Name</mat-label>
+      <input formControlName="name" matInput type="text" placeholder="Ex. Samantha">
+    </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest's NIC</mat-label>
+      <input formControlName="nic" matInput type="number">
+    </mat-form-field>
+  </div>
+
+  <div class="col-6">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest's Email</mat-label>
+      <input formControlName="email" matInput placeholder="Ex.example@example.com">
+    </mat-form-field>
+  </div>
+
+  <button [disabled]="updateGuestForm.invalid" mat-button mat-raised-button color="primary">Update Guest Details</button>
+</form>
+</div>
+

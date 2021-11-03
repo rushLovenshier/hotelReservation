@@ -1,0 +1,45 @@
+<div class="main-wrap">
+
+  <div class="main-wrap">
+
+    <form [formGroup]="searchGuestForm" (ngSubmit)="searchData()">
+
+      <div class="col-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>Guest Id</mat-label>
+          <input formControlName="id" matInput type="text" placeholder="Ex. C001">
+        </mat-form-field>
+      </div>
+
+      <button [disabled]="searchGuestForm.invalid" type="submit" mat-button mat-raised-button color="primary">
+        Search Guest
+      </button>
+    </form>
+  </div>
+
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Guest ID</th>
+      <th>Guest Name</th>
+      <th>Guest NIC</th>
+      <th>Guest Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{selectedGuest?.id}}</td>
+      <td>{{selectedGuest?.name}}</td>
+      <td>{{selectedGuest?.nic}}</td>
+      <td>{{selectedGuest?.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+</mat-paginator>

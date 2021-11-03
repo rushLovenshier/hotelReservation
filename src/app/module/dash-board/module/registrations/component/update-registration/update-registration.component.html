@@ -1,0 +1,35 @@
+<div class="main-wrap">
+
+  <form [formGroup]="updateRegistrationForm" (ngSubmit)="updateData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Guest NIC</mat-label>
+        <input formControlName="nic" matInput type="text"  placeholder="NIC">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Guest Name</mat-label>
+        <input formControlName="name" matInput type="text" placeholder="Ex. Samantha">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Room ID</mat-label>
+        <input formControlName="id" matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="col-6">
+      <mat-form-field class="example-full-width">
+        <mat-label>Time</mat-label>
+        <input formControlName="time" matInput placeholder="">
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="updateRegistrationForm.invalid" mat-button mat-raised-button color="primary">Update Registration Details</button>
+  </form>
+</div>

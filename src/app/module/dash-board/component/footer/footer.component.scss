@@ -1,0 +1,9 @@
+.main-wrap{
+  width: 100%;
+  height: 70px;
+  //border: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0, 88, 122), rgb(0, 136, 145));
+  z-index: 1;
+}

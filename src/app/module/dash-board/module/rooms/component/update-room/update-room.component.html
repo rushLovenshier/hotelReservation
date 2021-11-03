@@ -1,0 +1,30 @@
+<div class="main-wrap">
+
+  <form [formGroup]="updateRoomForm" (ngSubmit)="updateData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Room ID</mat-label>
+        <input formControlName="id" matInput type="text"  placeholder="Ex. R001">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Availability</mat-label>
+        <input formControlName="availability" matInput type="text" placeholder="...">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Time</mat-label>
+        <input formControlName="time" matInput type="text" placeholder="from date/time to date/tim">
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="updateRoomForm.invalid" mat-button mat-raised-button color="primary">
+      Update Room Details
+    </button>
+  </form>
+</div>

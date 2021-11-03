@@ -1,0 +1,16 @@
+<div class="main-wrap">
+
+  <form [formGroup]="deleteRegistrationForm" (ngSubmit)="deleteData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Guest NIC</mat-label>
+        <input formControlName="nic" matInput type="text"  placeholder="">
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="deleteRegistrationForm.invalid" mat-button mat-raised-button color="primary">
+      Delete Registration
+    </button>
+  </form>
+</div>

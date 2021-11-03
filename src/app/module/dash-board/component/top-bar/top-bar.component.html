@@ -1,0 +1,54 @@
+<div class="main-wrap">
+  <div class="name-wrap">
+    <h2>HOTEL89</h2>
+  </div>
+
+  <div class="ham-wrap" (click)="sliderState=!sliderState">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="logged-user-wrap">
+    <div class="user-wrap">
+      <h4>User Name</h4>
+    </div>
+    <div class="avatar-wrap">
+      <img src="https://thumbs.dreamstime.com/b/user-icon-vector-people-profile-person-illustration-business-users-group-symbol-male-195161330.jpg" alt="user image">
+    </div>
+  </div>
+  <div class="slide" *ngIf="sliderState" [@slider]>
+    <div class="slide-top">
+      <h2 class="user-name">User Name</h2>
+      <h5 class="user-email">usernameorsomething@gmail.com</h5>
+      <div class="slide-avatar-wrap">
+        <img src="https://thumbs.dreamstime.com/b/user-icon-vector-people-profile-person-illustration-business-users-group-symbol-male-195161330.jpg" alt="user image">
+      </div>
+    </div>
+
+    <div class="slide-bottom">
+
+      <ul>
+
+        <li routerLink="/dashboard/guest" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Guests</span>
+        </li>
+        <li routerLink="/dashboard/rooms" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Room Availability</span>
+        </li>
+        <li routerLink="/dashboard/registrations" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Registrations</span>
+        </li>
+        <li routerLink="/dashboard/bill" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Billing Section</span>
+        </li>
+        <li routerLink="/dashboard/help-desk" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Help Desk</span>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+

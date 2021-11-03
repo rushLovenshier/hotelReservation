@@ -1,0 +1,16 @@
+<div class="main-wrap">
+
+  <form [formGroup]="deleteRoomForm" (ngSubmit)="deleteData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Room number</mat-label>
+        <input formControlName="id" matInput type="text"  placeholder="Ex. R001">
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="deleteRoomForm.invalid" mat-button mat-raised-button color="primary">
+      Delete Room
+    </button>
+  </form>
+</div>

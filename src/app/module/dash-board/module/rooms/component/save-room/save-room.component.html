@@ -1,0 +1,30 @@
+<div class="main-wrap">
+
+  <form [formGroup]="saveRoomForm" (ngSubmit)="saveData()">
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Room Id</mat-label>
+        <input formControlName="id" matInput type="text"  placeholder="Room number">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Availability</mat-label>
+        <input formControlName="availability" matInput type="text" placeholder="available/not available">
+      </mat-form-field>
+    </div>
+
+    <div class="col-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Time</mat-label>
+        <input formControlName="time" matInput type="text" placeholder="from date/time to date/time">
+      </mat-form-field>
+    </div>
+
+    <button [disabled]="saveRoomForm.invalid" mat-button mat-raised-button color="primary">
+      Save Room Details
+    </button>
+  </form>
+</div>

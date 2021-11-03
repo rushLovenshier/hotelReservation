@@ -3,15 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthenticationContextComponent } from './core/authentication/authentication-context/authentication-context.component';
+import { LoginComponent } from './core/authentication/login/login.component';
+import { SignUpComponent } from './core/authentication/sign-up/sign-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {LocalStorageModule} from "angular-2-local-storage";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthenticationContextComponent,
+    LoginComponent,
+    SignUpComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        LocalStorageModule.forRoot()
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

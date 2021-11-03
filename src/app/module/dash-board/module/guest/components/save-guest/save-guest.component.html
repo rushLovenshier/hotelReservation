@@ -1,0 +1,37 @@
+<div class="main-wrap">
+
+<form [formGroup]="saveGuestForm" (ngSubmit)="saveData()">
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest Id</mat-label>
+      <input formControlName="id" matInput type="text"  placeholder="Ex. C001">
+    </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest Name</mat-label>
+      <input formControlName="name" matInput type="text" placeholder="Ex. Name">
+    </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest NIC</mat-label>
+      <input formControlName="nic" matInput type="NIC number">
+    </mat-form-field>
+  </div>
+
+  <div class="col-3">
+    <mat-form-field class="example-full-width">
+      <mat-label>Guest email</mat-label>
+      <input formControlName="email" matInput placeholder="Ex. email@example.com">
+    </mat-form-field>
+  </div>
+
+  <button [disabled]="saveGuestForm.invalid" mat-button mat-raised-button color="primary">
+    Save Guest Details
+  </button>
+</form>
+</div>

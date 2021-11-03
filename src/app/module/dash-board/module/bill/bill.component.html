@@ -1,0 +1,81 @@
+<div class="container">
+  <br>
+  <br>
+  <p class="alert alert-dark">Guest Details</p>
+  <div class="row">
+    <div class="col-2">
+      <select class="form-control" #element (change)="selectGuest(element.value)">
+        <option *ngFor="let tempGuest of guests" value="{{tempGuest.id}}">{{tempGuest.id}}</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" disabled value="{{selectedGuest?.name}}">
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" disabled value="{{selectedGuest?.nic}}">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" [disabled]="true" [value]="selectedGuest?.email">
+    </div>
+  </div>
+
+  <hr>
+  <p class="alert alert-dark">Registration Details</p>
+  <div class="row">
+    <div class="col-2">
+      <select class="form-control" #elementR (change)="selectRegistration(elementR.value)">
+        <option *ngFor="let tempRegistration of registrations" value="{{tempRegistration.id}}">{{tempRegistration.id}}</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" disabled value="{{selectedRegistration?.name}}">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" disabled value="{{selectedRegistration?.nic}}">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" [disabled]="true" [value]="selectedRegistration?.time">
+    </div>
+    <div class="col-1">
+      <input type="number" #element3 class="form-control" (keyup.enter)="addToCart(element3.value)">
+    </div>
+
+  </div>
+  <hr>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Room id</th>
+      <th>name</th>
+      <th>nic</th>
+      <th>time</th>
+      <th>Total</th>
+      <th>Option</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempItem of cart; index as num">
+      <td>{{tempItem.id}}</td>
+      <td>{{tempItem.name}}</td>
+      <td>{{tempItem.nic}}</td>
+      <td>{{tempItem.time}}</td>
+      <td>{{tempItem.total}}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" (click)="deleteFromCart(num)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+  <div class="bottom">
+    <div class="left-side">
+      <span>Total : {{totalCost}} LKR</span>
+    </div>
+    <div class="right-side">
+      <button class="btn btn-primary btn-sm" (click)="payment()">Payment</button>
+    </div>
+  </div>
+
+</div>

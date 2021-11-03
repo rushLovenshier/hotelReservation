@@ -1,0 +1,26 @@
+<div class="main-wrap">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Room ID</th>
+      <th>Availability</th>
+      <th>Time Period</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempRoom of rooms; index as num">
+      <td>{{tempRoom.id}}</td>
+      <td>{{tempRoom.availability}}</td>
+      <td>{{tempRoom.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <mat-paginator [length]="100"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+
+</div>
+

@@ -1,0 +1,168 @@
+.main-wrap{
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, rgb(0, 136, 145), rgb(18, 110, 130));
+  //position: fixed;
+}
+.name-wrap{
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 88, 122);
+
+  h2{
+    font-family: "Rampart One";
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.ham-wrap{
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, rgb(0, 88, 122), rgb(0, 136, 145));
+  position: absolute;
+  left: 250px;
+  top: 0;
+  padding: 12px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.ham-wrap:hover{
+  background:  rgb(0, 88, 122);
+  cursor: pointer;
+}
+.line{
+  height: 3px;
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+}
+.logged-user-wrap{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  padding: 0px 10px;
+}
+.user-wrap{
+  flex: 1;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman";
+  }
+}
+.avatar-wrap{
+  width: 50px;
+  height: 50px;
+  right: 0px;
+  background-color: black;
+  border-radius: 100%;
+
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+}
+
+.slide{
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  //background-color: #2f3640;
+
+}
+.slide-top{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #1B2330;
+  display: flex;
+  justify-content: center;
+}
+.slide-bottom{
+  flex: 1;
+  background-color: #252F3E;
+}
+
+.slide-avatar-wrap{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #252F3E;
+  bottom: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+  }
+
+}
+.user-name{
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Times New Roman";
+}
+.user-email{
+  color: gray;
+  position: absolute;
+  margin-top: 50px;
+  font-family: "Times New Roman";
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 80px;
+
+
+  li{
+    padding: 8px 10px;
+    border-left: 5px solid transparent;
+
+    span{
+      color: white;
+    }
+
+  }
+
+  li:hover{
+    cursor: pointer;
+    background-color: #334155;
+    border-left: 10px solid rgb(0, 88, 122);
+  }
+
+}
+
+.active {
+  background-color: #334155;
+  border-left: 10px solid rgb(0, 88, 122);
+}
+
+

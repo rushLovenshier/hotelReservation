@@ -1,0 +1,45 @@
+<div class="main-wrap">
+
+  <div class="main-wrap">
+
+    <form [formGroup]="searchRegistrationForm" (ngSubmit)="searchData()">
+
+      <div class="col-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>Guest NIC</mat-label>
+          <input formControlName="nic" matInput type="text" placeholder="">
+        </mat-form-field>
+      </div>
+
+      <button [disabled]="searchRegistrationForm.invalid" type="submit" mat-button mat-raised-button color="primary">
+        Search Registration
+      </button>
+    </form>
+  </div>
+
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Guest NIC</th>
+      <th>Guest Name</th>
+      <th>Room ID</th>
+      <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{selectedGuest?.nic}}</td>
+      <td>{{selectedGuest?.name}}</td>
+      <td>{{selectedGuest?.id}}</td>
+      <td>{{selectedGuest?.time}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+</mat-paginator>
